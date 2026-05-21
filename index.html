@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plutus Detailing | Luxury Automotive Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: black; color: white; margin: 0; }
+        
+        .parallax-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('hero-exterior.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 1.2s ease-out forwards; }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .gallery-item {
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gallery-item img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item:hover img { transform: scale(1.1); border-color: #facc15; }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="fixed w-full z-50 nav-blur border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex space-x-6 md:space-x-10 text-[10px] md:text-xs tracking-[0.3em] uppercase font-light">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                <a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Quote</a>
+            </div>
+            <div class="flex items-center">
+                <img src="logo.png" alt="Plutus Detailing Logo" class="h-10 md:h-14 w-auto object-contain">
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="relative flex items-center justify-center parallax-bg">
+        <div class="relative z-10 text-center px-6 max-w-4xl animate-fade-up">
+            <h1 class="text-5xl md:text-8xl font-light tracking-tighter mb-4">
+                PLUTUS <span class="text-yellow-400 font-extralight">DETAILING</span>
+            </h1>
+            <p class="text-xs md:text-lg font-light tracking-[0.4em] mb-12 opacity-80 uppercase">
+                Precision. Luxury. Perfection.
+            </p>
+            <div class="flex flex-col md:flex-row gap-5 justify-center items-center mb-16">
+                <a href="#services" class="border border-yellow-400 text-yellow-400 px-12 py-4 rounded-sm text-xs tracking-widest hover:bg-yellow-400 hover:text-black transition uppercase w-72 md:w-auto">
+                    View Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#gallery" class="border border-white/30 text-white px-12 py-4 rounded-sm text-xs tracking-widest hover:bg-white hover:text-black transition uppercase w-72 md:w-auto">
+                    View Gallery <i class="fas fa-camera ml-2"></i>
+                </a>
+            </div>
+            <div class="flex justify-center gap-12 text-yellow-400 text-2xl">
+                <a href="https://www.instagram.com/plutus_detailing/" target="_blank" class="hover:scale-125 transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/PlutusDetailing" target="_blank" class="hover:scale-125 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:plutusdetailing@gmail.com" class="hover:scale-125 transition duration-300"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="bg-black py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 animate-fade-up">
+                <h2 class="text-3xl md:text-5xl font-light tracking-[0.3em] uppercase text-yellow-400">The Collections</h2>
+                <p class="text-gray-500 text-xs tracking-[0.4em] mt-4 uppercase">Select your level of perfection</p>
+                <div class="w-24 h-px bg-yellow-400 mx-auto mt-6 opacity-40"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-24">
+
+                <!-- PREMIUM -->
+                <div class="border border-white/10 p-8 rounded-sm hover:border-white/30 transition-all duration-500 flex flex-col h-[650px] opacity-80 hover:opacity-100">
+                    <h3 class="text-xl font-light tracking-widest mb-2">PREMIUM</h3>
+                    <div class="text-[10px] text-yellow-400 tracking-[0.3em] mb-6 uppercase">4 Hour Transformation</div>
+                    <div class="mb-8 border-b border-white/5 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] uppercase tracking-tighter text-gray-500">Cars</span>
+                            <span class="text-xl font-light">$160</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] uppercase tracking-tighter text-gray-500">Trucks/SUV</span>
+                            <span class="text-xl font-light">$180</span>
+                        </div>
+                    </div>
+                    <ul class="text-[10px] uppercase tracking-[0.15em] leading-loose text-gray-400 space-y-3 flex-grow">
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Interior Wipe/Disinfect</li>
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Full Interior Vacuum</li>
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Windows & Mirrors</li>
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Floor Mat Detail</li>
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Professional Hand Wash</li>
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Wheel Wells & Rims</li>
+                        <li><i class="fas fa-minus mr-2 opacity-30"></i> Plastics Dressed</li>
+                    </ul>
+                </div>
+
+                <!-- PLUTUS -->
+                <div class="relative border-2 border-yellow-400 p-10 rounded-sm bg-gradient-to-b from-yellow-400/10 to-transparent flex flex-col h-[750px] shadow-[0_0_50px_rgba(250,204,21,0.1)] z-10 scale-105 md:scale-110">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-[10px] px-6 py-1.5 tracking-[0.4em] font-bold uppercase whitespace-nowrap">The Gold Standard</div>
+                    <h3 class="text-3xl font-light tracking-[0.2em] mb-2 text-yellow-400">PLUTUS</h3>
+                    <div class="text-xs text-white tracking-[0.3em] mb-8 uppercase font-semibold">8 - 12 Hour Masterclass</div>
+                    <div class="mb-10 border-b border-yellow-400/20 pb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs uppercase tracking-widest text-gray-300">Cars</span>
+                            <span class="text-3xl font-light text-white">$800</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs uppercase tracking-widest text-gray-300">Trucks/SUV</span>
+                            <span class="text-3xl font-light text-white">$1,000</span>
+                        </div>
+                    </div>
+                    <ul class="text-[11px] uppercase tracking-[0.2em] leading-loose text-gray-100 space-y-4 flex-grow">
+                        <li class="text-yellow-400 font-bold italic border-b border-yellow-400/10 pb-2 mb-4">Ultimate Restoration Includes:</li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i> Full Stain Removal</li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i> Carpet & Seat Shampoo</li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i> Interior Steam Cleaning</li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i> 1-Step Machine Polish</li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i> 6-Month Ceramic Shield</li>
+                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-3 mt-1"></i> Leather & Plastic Restoration</li>
+                    </ul>
+                </div>
+
+                <!-- DELUXE -->
+                <div class="border border-white/10 p-8 rounded-sm hover:border-white/30 transition-all duration-500 flex flex-col h-[650px] opacity-80 hover:opacity-100">
+                    <h3 class="text-xl font-light tracking-widest mb-2">DELUXE</h3>
+                    <div class="text-[10px] text-yellow-400 tracking-[0.3em] mb-6 uppercase">4 - 6 Hour Detail</div>
+                    <div class="mb-8 border-b border-white/5 pb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] uppercase tracking-tighter text-gray-500">Cars</span>
+                            <span class="text-xl font-light">$250</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] uppercase tracking-tighter text-gray-500">Trucks/SUV</span>
+                            <span class="text-xl font-light">$300</span>
+                        </div>
+                    </div>
+                    <ul class="text-[10px] uppercase tracking-[0.15em] leading-loose text-gray-400 space-y-3 flex-grow">
+                        <li class="text-white italic mb-2 border-b border-white/5 pb-2">Everything in Premium plus:</li>
+                        <li><i class="fas fa-plus mr-2 text-yellow-400/50"></i> Leather Conditioner</li>
+                        <li><i class="fas fa-plus mr-2 text-yellow-400/50"></i> Plastic Conditioner</li>
+                        <li><i class="fas fa-plus mr-2 text-yellow-400/50"></i> Clay Bar Decon</li>
+                        <li><i class="fas fa-plus mr-2 text-yellow-400/50"></i> Iron Removal</li>
+                        <li><i class="fas fa-plus mr-2 text-yellow-400/50"></i> 30-Day Wax Guard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ADD-ONS -->
+            <div class="max-w-4xl mx-auto border-t border-white/10 pt-16">
+                <h4 class="text-center text-sm font-light tracking-[0.5em] uppercase mb-12 text-gray-400">Bespoke Add-Ons</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-12">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500">Headlight Restoration</span>
+                        <span class="text-yellow-400 font-light">$75</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500">Leather Conditioning</span>
+                        <span class="text-yellow-400 font-light">$150</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500">Claybar Treatment</span>
+                        <span class="text-yellow-400 font-light">$180</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500">Pet Hair Removal</span>
+                        <span class="text-yellow-400 font-light">$30</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500">Odor Removal</span>
+                        <span class="text-yellow-400 font-light">$50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="bg-black py-20 px-4 md:px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-light tracking-[0.3em] uppercase text-yellow-400">The Portfolio</h2>
+                <div class="w-20 h-px bg-yellow-400 mx-auto mt-4 opacity-50"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="gallery-item"><img src="g1.jpg" alt="Work 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="g2.jpg" alt="Work 2" loading="lazy"></div>
+                <div class="gallery-item"><img src="g3.jpg" alt="Work 3" loading="lazy"></div>
+                <div class="gallery-item"><img src="g4.jpg" alt="Work 4" loading="lazy"></div>
+                <div class="gallery-item"><img src="g5.jpg" alt="Work 5" loading="lazy"></div>
+                <div class="gallery-item"><img src="g6.jpg" alt="Work 6" loading="lazy"></div>
+                <div class="gallery-item"><img src="g7.jpg" alt="Work 7" loading="lazy"></div>
+                <div class="gallery-item"><img src="g8.jpg" alt="Work 8" loading="lazy"></div>
+                <div class="gallery-item"><img src="g9.jpg" alt="Work 9" loading="lazy"></div>
+                <div class="gallery-item"><img src="g10.jpg" alt="Work 10" loading="lazy"></div>
+                <div class="gallery-item"><img src="g11.jpg" alt="Work 11" loading="lazy"></div>
+                <div class="gallery-item"><img src="g12.jpg" alt="Work 12" loading="lazy"></div>
+                <div class="gallery-item"><img src="g13.jpg" alt="Work 13" loading="lazy"></div>
+                <div class="gallery-item"><img src="g14.jpg" alt="Work 14" loading="lazy"></div>
+                <div class="gallery-item"><img src="g15.jpg" alt="Work 15" loading="lazy"></div>
+                <div class="gallery-item"><img src="g16.jpg" alt="Work 16" loading="lazy"></div>
+                <div class="gallery-item"><img src="g17.jpg" alt="Work 17" loading="lazy"></div>
+                <div class="gallery-item"><img src="g18.jpg" alt="Work 18" loading="lazy"></div>
+                <div class="gallery-item"><img src="g19.jpg" alt="Work 19" loading="lazy"></div>
+                <div class="gallery-item"><img src="g20.jpg" alt="Work 20" loading="lazy"></div>
+                <div class="gallery-item"><img src="g21.jpg" alt="Work 21" loading="lazy"></div>
+                <div class="gallery-item"><img src="g22.jpg" alt="Work 22" loading="lazy"></div>
+                <div class="gallery-item"><img src="g23.jpg" alt="Work 23" loading="lazy"></div>
+                <div class="gallery-item"><img src="g24.jpg" alt="Work 24" loading="lazy"></div>
+                <div class="gallery-item"><img src="g25.jpg" alt="Work 25" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-black py-10 border-t border-white/5 text-center">
+        <p class="text-[10px] tracking-[0.2em] text-gray-600 uppercase">&copy; 2026 Plutus Detailing. All Rights Reserved.</p>
+    </footer>
+    <section id="contact" class="bg-black py-24 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-light tracking-[0.3em] uppercase text-yellow-400 mb-6">Request a Quote</h2>
+            <p class="text-gray-400 text-xs md:text-sm tracking-[0.2em] uppercase mb-16 leading-relaxed">
+                Every vehicle is unique. Message us for a personalized estimate <br class="hidden md:block"> based on your car's condition and specific needs.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://www.instagram.com/plutus_detailing/" target="_blank" class="group border border-white/10 p-10 hover:border-yellow-400 transition-all duration-500">
+                    <i class="fab fa-instagram text-3xl text-yellow-400 mb-4 block group-hover:scale-110 transition"></i>
+                    <span class="text-[10px] tracking-[0.3em] uppercase text-white font-light">Direct Message</span>
+                    <p class="text-[9px] text-gray-500 mt-2 uppercase">Instagram</p>
+                </a>
+                <a href="https://www.facebook.com/PlutusDetailing" target="_blank" class="group border border-white/10 p-10 hover:border-yellow-400 transition-all duration-500">
+                    <i class="fab fa-facebook-f text-3xl text-yellow-400 mb-4 block group-hover:scale-110 transition"></i>
+                    <span class="text-[10px] tracking-[0.3em] uppercase text-white font-light">Send Message</span>
+                    <p class="text-[9px] text-gray-500 mt-2 uppercase">Facebook</p>
+                </a>
+                <a href="mailto:plutusdetailing@gmail.com" class="group border border-white/10 p-10 hover:border-yellow-400 transition-all duration-500">
+                    <i class="fas fa-envelope text-3xl text-yellow-400 mb-4 block group-hover:scale-110 transition"></i>
+                    <span class="text-[10px] tracking-[0.3em] uppercase text-white font-light">Email Inquiry</span>
+                    <p class="text-[9px] text-gray-500 mt-2 uppercase">plutusdetailing@gmail.com</p>
+                </a>
+            </div>
+            <div class="mt-20 text-[10px] tracking-[0.4em] text-gray-600 uppercase">
+                Serving Laredo, Texas & Surrounding Areas
+            </div>
+        </div>
+    </section>
+</body>
+</html>
